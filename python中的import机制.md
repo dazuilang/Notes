@@ -4,7 +4,7 @@
 import tensorflow
 model = keras.Sequential()
 ```
-作为一个小白，想当然以为import tensorflow后，tensorflow下的所有模块都可以直接调用了，但其实python中是存在命名空间的，上面只是把tensorflow加入到命名空间中，正确使用方式如下
+作为一个小白，想当然以为import tensorflow后，tensorflow下的所有模块都可以直接调用了，但其实只是把tensorflow加入到命名空间，tensorflow下的其他模块并没有加入命名空间，正确使用方式如下
 ```
 import tensorflow
 model = tensorflow.keras.Sequential()
