@@ -14,7 +14,7 @@ model = tensorflow.keras.Sequential()
 from tensorflow import keras
 model = keras.Sequential()
 ```
-当然，还有种不太常见的方法
+还有种不太常见的写法
 ```
 import tensorflow.keras
 model = tensorflow.keras.Sequential()
