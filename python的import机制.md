@@ -1,4 +1,4 @@
-# python中的import机制
+# python的import机制
 在学习tensorflow时发现，下面这段程序会提示出错
 ```
 import tensorflow
