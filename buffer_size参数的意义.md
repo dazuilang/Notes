@@ -1,4 +1,12 @@
-shuffle()是tensorflow中用来打乱数据集顺序的函数，buffer_size是其中一个参数，官方文档中介绍如下
+shuffle()是tensorflow中用来打乱数据集顺序的函数，函数原型如下
+```
+shuffle(
+    buffer_size,
+    seed=None,
+    reshuffle_each_iteration=None
+)
+```
+buffer_size是其中一个参数，官方文档中介绍如下
 
 > buffer_size: A tf.int64 scalar tf.Tensor, representing the number of elements from this dataset from which the new dataset will sample.
 
