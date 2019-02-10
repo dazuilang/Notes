@@ -16,7 +16,6 @@ int main()
     a.insert(5);
     a.insert(3);
     a.insert(7);
-    a.insert(5);
 
     //查找元素5是否存在
     a.count(5);
@@ -27,7 +26,6 @@ int main()
 
     //顺序遍历
     set<int>::iterator it;
-    it = a.find(1);
     for (it = a.begin(); it != a.end(); it++)
         cout << *it << endl;
     
@@ -47,8 +45,7 @@ int main()
 {
     map<string, int> a;
     a["a"] = 2;
-    a["b"] = 5;
-    a["c"] = 6;
+    a.insert({"b",5});
     a.clear();
     a.empty();
     a = {{"a", 5}, {"c", 7}, {"b", 6}};
@@ -60,7 +57,6 @@ int main()
 
     //顺序遍历
     map<string, int>::iterator it;
-    it = a.find("a");
     for (it = a.begin(); it != a.end(); it++)
         cout << it->first << ' ' << it->second << endl;
     
