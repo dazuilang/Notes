@@ -50,9 +50,28 @@ sort的函数原型如下
 template <class RandomAccessIterator, class Compare>
   void sort (RandomAccessIterator first, RandomAccessIterator last, Compare comp);
 ```
-其中compare函数为可选函数，可以用来比较struct等结构体
+其中compare函数为可选函数，可以用来比较struct等结构体，用法如下
 ```
-bool compare(struct& a,struct& b){
-    return a.c>b.c;
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+struct A
+{
+       int c;
+};
+
+bool compare(A& a,A& b) 
+{
+     return a.c < b.c;
 }
+
+int main()
+{
+    A a[]{2,4,5,3,1};
+    sort(a, a+ 5,compare); 
+    for(A i:a)
+        printf("%d",i.c);
+}
+
 ````
